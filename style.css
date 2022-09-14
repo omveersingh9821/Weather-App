@@ -35,7 +35,7 @@ body{
     top: -60px;
     color: #eee;
 }
-.temp span{
+.temp span,.temp1{
     font-weight: 100;
     font-size: 5em;
     letter-spacing:-5px ;
@@ -44,6 +44,15 @@ body{
 }
 .card-mid{
     line-height: 0.5;
+}
+.date{
+    text-align: center;
+    line-height: 1;
+    color:black;
+    margin-top:-8rem;
+    margin-bottom:1rem;
+    font-size: 36px;
+    font-weight:200;
 }
 .condition{
     line-height: 1em;
@@ -93,4 +102,23 @@ body{
     font-size: 50px;
     font-weight: 100;
     letter-spacing: -2px;
+}
+.toggle-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0.5rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: #eee;
+    cursor: pointer;
+    
+}
+.toggle-btn p{
+    text-align: center;
+    margin-top: 13%;
+    font-size: 25px;
+    color: rgb(100, 94, 94);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
