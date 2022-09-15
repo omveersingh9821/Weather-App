@@ -45,12 +45,13 @@ requestLoc()
 })
 
 const spitOutCelcius = (kelvin)=>{
-   
+
     const celcius = Math.round(kelvin - 273.15);
+    console.log(celcius);
     return celcius;
 }
 const spitOutFahrenheit = (kelvin)=>{
-   
+
     const Fahrenheit = Math.round(1.8*(kelvin-273) + 32);
     console.log(Fahrenheit)
     return Fahrenheit;
@@ -67,20 +68,25 @@ const isDayTime =(icon)=>{
 
 const updateWeatherApp = (city)=>{
     console.log(city);
+    
     var temp = spitOutCelcius(city.main.temp);
 
     //temperature conversion
     toggle.addEventListener('click',(e)=>{
-      
-       if(e.target.innerHTML == 'C'){
-            temp = spitOutCelcius(city.main.temp);
-            document.querySelector('.temp-1').innerHTML=`${temp}&degC`;
-            e.target.innerHTML = 'F';
 
-       }else if(e.target.innerHTML == 'F'){
-            temp = spitOutFahrenheit(city.main.temp) 
-            document.querySelector('.temp-1').innerHTML=`${temp}&degF`;
+       if(e.target.innerHTML == 'F'){
+            temp = spitOutFahrenheit(city.main.temp)
+            document.querySelector('.temp1').innerHTML=temp+'&degF';
             e.target.innerHTML = 'C';
+            e.stopImmediatePropagation();
+           
+            
+       }else if(e.target.innerHTML == 'C'){
+            temp = spitOutCelcius(city.main.temp);
+            document.querySelector('.temp1').innerHTML=temp+'&degC';
+            e.target.innerHTML = 'F';
+            e.stopImmediatePropagation();
+            
        }
        
     })
@@ -91,7 +97,7 @@ const updateWeatherApp = (city)=>{
     cardBody.innerHTML=
     `<div class="card-mid row">
         <div class="col-8 text-center temp">
-            <span class="temp-1">${temp}&degC</span>
+            <span class="temp1">${temp}&degC</span>
         </div>
         <div class="col-4 condition-temp">
             <p class="condition"> ${city.weather[0].description} </p>
@@ -144,7 +150,7 @@ searchForm.addEventListener('submit',(e)=>{
 
     })
     .catch((err)=>{
-        console.log(err);
+        console.log('error in form',err);
     })
      
 

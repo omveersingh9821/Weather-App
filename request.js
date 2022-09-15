@@ -18,7 +18,7 @@ const requestCity = async (city)=>{
     const query =`?q=${city}&appid=${keys}`;
 
     //make fetch call
-    const response =await fetch(baseURL+query);
+    const response = await fetch(baseURL+query);
 
     //promise data
     const data = await response.json();
@@ -45,7 +45,7 @@ const requestLoc =async ()=>{
         //PROMISE DATA
         const data = await response.json();
         
-        // console.log(data.principalSubdivision);
+        console.log(data.principalSubdivision);
         // return data.principalSubdivision;
 
         requestCity(data.principalSubdivision)
