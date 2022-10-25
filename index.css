@@ -1,5 +1,4 @@
 body{
-    background: #e0e0e0;
     columns: #707070;
     margin: 0;
     padding: 0;
@@ -8,17 +7,12 @@ body{
     max-width: 400px;
     min-width: 400px;
 }
-.title{
-    font-weight: 700;
-    font-size: 50px;
 
-}
 .form-rounded{
     border-radius: 2em;
 }
 .back-card{
     border-radius: 40px !important;
-
 }
 .city-name{
     position: absolute;
@@ -34,6 +28,33 @@ body{
     position: relative;
     top: -60px;
     color: #eee;
+}
+.logo2{
+    border: none;
+    border-radius: 20px;
+    position: absolute;
+    top:1.5%;
+    left: 2%;
+    width:60px;
+    text-align: center;
+    margin-top: 5px;
+}
+.logo1{
+    border: none;
+    border-radius: 20px;
+    position: absolute;
+    margin-top: 10px;
+    top:15%;
+    left: 40%;
+    width:80px;
+    height: 5vh;
+    text-align: center;
+    color:green;
+}
+.logo1:hover,.logo2:hover{
+    cursor: pointer;
+    background-color:rgb(141, 229, 148);
+    color: #707070;
 }
 .temp span,.temp1{
     font-weight: 100;
@@ -112,8 +133,7 @@ body{
     height: 50px;
     border-radius: 100%;
     background-color: #eee;
-    cursor: pointer;
-    
+    cursor: pointer; 
 }
 .toggle-btn p{
     text-align: center;
@@ -122,3 +142,68 @@ body{
     color: rgb(100, 94, 94);
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
+.toggle-btn:hover{
+    background-color: rgb(19, 166, 220);
+}
+.toggle-btn p:hover{
+   color:white;
+}
+.wind p{
+    margin-top: 13px;
+}
+
+/* Future block */
+.back-card-2{
+    display: none;
+}
+.future-block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 29px 0px;
+}
+.future-block h2{
+    font-size: 1.5em;
+    font-weight: 400;
+    letter-spacing: -1px;
+    color: rgb(117, 98, 98);
+    padding:15px 0 0 15px;
+}
+.future-block p{
+    font-size: 1.5em;
+    font-weight: 100;
+    letter-spacing: -1px;
+    margin: 0;
+    color: #707070;
+}   
+.future-block .future-img{
+    width: 90px;
+    background-color: #272525;
+    border-radius: 50px;
+}
+   
+
+/* media quaries */
+@media screen and (max-width:600px){
+    .container{
+        max-width: 100%;
+        min-width: 100%;
+    }
+    .col p{
+        font-size: 35px ;
+    }
+    .col .wind{
+        margin-top: -10px !important;
+    }
+    .wind p {
+        margin-top: 0;
+    
+    }    
+}
+@media screen and (max-width:380px){
+    .wind p {
+        margin-top: 15px;
+      
+    }    
+}
+    

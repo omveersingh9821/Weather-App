@@ -10,21 +10,20 @@
     <!-- FONT AWESOME LINK -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Custom css link -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="container my-5">
-        <h1 class="text-center title">Weather App</h1>
+    <div class="container">
+        <h1 class="text-center">Weather App</h1>
         <form class="search-location">
-           <input type="text" name="city" placeholder="What City?" autocomplete="off" class="form-control text-muted form-rounded p-2 shadow-sm">
+           <input type="text" name="city" placeholder="Enter City Name" autocomplete="off" class="form-control text-muted form-rounded p-1 shadow-sm">
         </form>
-        <div class="card rounded my-3 shadow-lg back-card ">
+        <div class="card rounded my-2 shadow-lg back-card ">
             <div class="card-top text-center">
-                <div class="city-name my-3">
+                <div class="city-name my-1">
                     <p>Delhi</p>
                     <span>...</span>
                 </div>
-            
                 <img src="img/night_image.svg" alt="" class="card-img-top time">
             </div>
             <div class="toggle-btn">
@@ -34,16 +33,44 @@
                 <p class="time">Time</p>
                 <p class="date1">Date</p>
             </div>
-
+            <!-- arrow logo -->
+            <button class="logo1"><i class="fa fa-arrow-right"></i></button>
+            <button class="logo2"><i class="fa fa-rotate-right"></i></button>
+            
             <div class="card-body">
                 <!-- Dynamic data using javascript-->
             </div>
         </div>
+        
+        <!-- 4days collection -->
+        <div class="back-card-2 ">
+            <div class="future-block ">
+                <h2 id="date1">01/01/2001</h2>
+                <p id="1">0&degC</p>
+                <img src="" alt="logo" id="img1" class="future-img">
+            </div>
+            <div  class="future-block">
+                <h2 id="date2">01/01/2001</h2>
+                <p id="2">0&degC</p>
+                <img src="" alt="logo" id="img2" class="future-img">
+            </div>
+            <div class="future-block">
+                <h2 id="date3">01/01/2001</h2>
+                <p id="3">0&degC</p>
+                <img src="" alt="logo" id="img3" class="future-img">
+            </div>
+            <div  class="future-block">
+                <h2 id="date4">01/01/2001</h2>
+                <p id="4">0&degC</p>
+                <img src="" alt="logo" id="img4" class="future-img"> 
+            </div>
 
+
+        </div>
   
     </div>
 
-    <script src="request.js"></script>
-    <script src="index.js"></script>
+    <script src="fetch.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
